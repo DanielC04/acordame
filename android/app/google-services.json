@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "577362452367",
+    "project_id": "yavolvelo",
+    "storage_bucket": "yavolvelo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577362452367:android:3259184c8144b6feee35fa",
+        "android_client_info": {
+          "package_name": "com.example.acordame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "577362452367-1gnom11tvrun8ffeh7c2cpdmtnn9niq1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.acordame",
+            "certificate_hash": "ddeeadc3a55af959247153935e6cea60988573e0"
+          }
+        },
+        {
+          "client_id": "577362452367-8fqdrht9h5hkdr9ivr5h03djfooers4n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4Hs2cCJQdXweQF7iQs7hoEcvgIWmbTeQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "577362452367-8fqdrht9h5hkdr9ivr5h03djfooers4n.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "577362452367-8v9bs28a7r0c2jv7bfes1hugkasun8q8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.acordame"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
