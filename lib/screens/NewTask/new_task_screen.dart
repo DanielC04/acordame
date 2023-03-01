@@ -28,7 +28,7 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
             child: Container(
                 // color: Theme.of(context).primaryColorLight,
                 padding: const EdgeInsets.all(10),
-                child: Provider(
+                child: ChangeNotifierProvider(
                     create: (context) => widget.taskData,
                     child: Form(
                         autovalidateMode: AutovalidateMode.onUserInteraction,

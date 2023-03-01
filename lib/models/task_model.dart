@@ -42,7 +42,7 @@ class TaskModel extends ChangeNotifier {
     return TaskModel(
         name: data?['name'],
         description: data?['description'],
-        dueTo: DateTime.tryParse(data?['dueTo']));
+        dueTo: DateTime.fromMillisecondsSinceEpoch(data?['dueTo'].seconds * 1000));
   }
 
   Map<String, dynamic> toFirestore() {
