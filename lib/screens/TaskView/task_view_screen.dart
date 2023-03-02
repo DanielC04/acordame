@@ -18,6 +18,7 @@ class TaskViewScreen extends StatelessWidget {
                     builder: (context) => NewTaskScreen(
                           title: 'Crear tarea nueva',
                           taskData: TaskModel(
+                              id: '',
                               description: '', dueTo: DateTime.now(), name: ''),
                         )));
               },

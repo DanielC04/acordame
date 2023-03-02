@@ -9,10 +9,10 @@ class NumberWheel extends StatelessWidget {
   final int initValue;
   final bool isInfinite;
   final bool shouldPadZeros;
-  final void Function(int i)? onChange;
+  final void Function(int i) onChange;
 
   const NumberWheel({
-    Key? super.key,
+    super.key,
     required this.minValue,
     required this.maxValue,
     required this.initValue,
@@ -37,29 +37,20 @@ class NumberWheel extends StatelessWidget {
             // unSelectTextStyle: TextStyle(color: Colors.grey),
             onValueChanged: (newVal) {
               print(newVal);
+              int numberAsInt;
+              if (newVal.runtimeType == int) {
+                numberAsInt = newVal;
+              } else if (newVal[0] == '0') {
+                numberAsInt = int.parse(newVal.substring(1, newVal.length));
+              } else {
+                numberAsInt = int.parse(newVal);
+              }
+              onChange(numberAsInt);
             },
             isInfinite: isInfinite,
-            datas: [for (var i = minValue; i <= maxValue; i++) 
-              if (i < 10 && shouldPadZeros) '0$i'
-              else i
+            datas: [
+              for (var i = minValue; i <= maxValue; i++)
+                if (i < 10 && shouldPadZeros) '0$i' else i
             ]));
-
-    // @override
-    // Widget build(BuildContext context) {
-    //   WheelChooser.byController
-    //   return SizedBox(
-    //       width: 90,
-    //       child: WheelChooser.integer(
-    //         onValueChanged: (s) {
-    //           if (onChange != null) onChange!(s);
-    //         },
-    //         maxValue: maxValue,
-    //         minValue: minValue,
-    //         initValue: initValue,
-    //         isInfinite: isInfinite,
-    //         unSelectTextStyle: TextStyle(color: Colors.grey),
-    //         squeeze: 1.25,
-    //       ));
-    // }
   }
 }

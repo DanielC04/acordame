@@ -16,7 +16,18 @@ class NewTaskScreen extends StatefulWidget {
 class _NewTaskScreenState extends State<NewTaskScreen> {
   final _formKey = GlobalKey<FormState>();
 
-  submit() async {}
+  submit() {
+    if (!_formKey.currentState!.validate()) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('No guardó los datos')),
+      );
+    }
+    widget.taskData.saveChangesToFirestore();
+    Navigator.of(context).pop();
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('Datos guardados :)')),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {

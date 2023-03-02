@@ -28,7 +28,7 @@ class _InputFieldsState extends State<InputFields>
           validator: (title) => (title == null || title.isEmpty)
               ? 'Ingresar título valido'
               : null,
-          onSaved: (newTitle) => updateTitle(newTitle ?? '')),
+          onChanged: (newTitle) => updateName(newTitle)),
       //
       // input of description
       //
@@ -38,9 +38,8 @@ class _InputFieldsState extends State<InputFields>
           hintText: 'Ingresá la descricción de la tarea (opciónal)',
           labelText: 'Descripción',
         ),
-        // initialValue: task.description,
-        initialValue: '',
-        onSaved: (newDescription) => updateDescription(newDescription ?? ''),
+        initialValue: taskData.description,
+        onChanged: (newDescription) => updateDescription(newDescription ?? ''),
       ),
       //
       // input of dueTo-Date
@@ -54,9 +53,7 @@ class _InputFieldsState extends State<InputFields>
 
   TaskModel getTask() => Provider.of<TaskModel>(context, listen: false);
 
-  void updateTitle(String newTitle) => null;
-  // void updateTitle(String newTitle) => getTask().title = newTitle;
+  void updateName(String newName) => getTask().name = newName;
 
-  void updateDescription(String newDescription) => null;
-  // getTask().description = newDescription;
+  void updateDescription(String newDescription) => getTask().description = newDescription;
 }
