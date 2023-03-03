@@ -28,7 +28,7 @@ class MonthWheel extends StatelessWidget {
     return SizedBox(
         width: 100,
         child: WheelChooser.byController(
-          controller: FixedExtentScrollController(initialItem: initValue),
+          controller: FixedExtentScrollController(initialItem: initValue - 1),
           unSelectTextStyle: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.grey),
           selectTextStyle: Theme.of(context).textTheme.bodySmall,
             magnification: 1.2,
@@ -42,7 +42,7 @@ class MonthWheel extends StatelessWidget {
             datas: [
               for (var month in Month.values)
                 month.toString().split('.').last
-            ]));
+          ]));
   }
 }
 

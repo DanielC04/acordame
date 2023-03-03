@@ -39,7 +39,7 @@ class _InputFieldsState extends State<InputFields>
           labelText: 'Descripción',
         ),
         initialValue: taskData.description,
-        onChanged: (newDescription) => updateDescription(newDescription ?? ''),
+        onSaved: (newDescription) => updateDescription(newDescription ?? ''),
       ),
       //
       // input of dueTo-Date

@@ -53,7 +53,7 @@ class _DueToInputState extends State<DueToInput>
               Tab(text: 'Datum', icon: Icon(Icons.date_range)),
             ],
           ),
-          Container(
+          SizedBox(
               height: 400, //height of TabBarView
               child: TabBarView(controller: _tabController, children: <Widget>[
                 const Center(
